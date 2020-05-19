@@ -1,0 +1,59 @@
+body {
+   font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+   font-size: 18px;
+}
+
+h5 {
+   font-size: 14px;
+}
+
+table.dataTable {
+   overflow: hidden;
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+   padding: 10px;
+}
+
+.d-flex {
+   display: flex;
+   flex-flow: row nowrap;
+}
+
+.inline {
+   display: inline-block;
+}
+
+.content-wrapper {
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   overflow: auto;
+}
+
+.header-purple {
+   color:#7539AD;
+}
+
+.header-grey {
+   color: #A6A6A6;
+}
+
+.dropdown-item {
+   /* padding: 5px 15px; */
+   color: #212529;
+}
+
+.fa, .fas {
+   /* padding: 2px; */
+   padding-right: 10px;
+   color: #212529;
+   /* width: 22px; */
+   /* height: 22px; */
+   font-size: 22px;
+   vertical-align: text-bottom;
+}
