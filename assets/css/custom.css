@@ -10,13 +10,22 @@ h5 {
    font-size: 14px;
 }
 
+table.dataTable thead .sorting {
+   height: 270px;
+}
+
 table.dataTable tbody th,
 table.dataTable tbody td {
    padding: 10px;
 }
 
-table.dataTable thead .sorting {
-   height: 270px;
+table.dataTable tbody tr {
+	background-color: #fff;
+	background-clip: border-box;
+	/* border: 1px solid rgba(0,0,0,.125); */
+	border: 1px solid #fff;
+	border-radius: .25rem;
+	padding: 1.25rem;
 }
 
 .d-flex {
@@ -39,6 +48,7 @@ table.dataTable thead .sorting {
 
 .header-purple {
    color:#7539AD;
+   font-weight: bold;
 }
 
 .header-grey,
