@@ -28,17 +28,6 @@ table.dataTable tbody tr {
 	padding: 1.25rem;
 }
 
-.d-flex {
-   display: flex;
-   flex-flow: row nowrap;
-}
-
-.flex-center {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-}
-
 .content-wrapper {
    display: flex;
    flex-direction: column;
@@ -46,33 +35,25 @@ table.dataTable tbody tr {
    overflow: auto;
 }
 
-.header-purple {
+table.dataTable .header-purple {
    color:#7539AD;
    font-weight: bold;
 }
 
-.header-grey,
-.grey {
+table.dataTable .header-grey,
+table.dataTable .grey {
    color: #A6A6A6;
 }
 
-.btn-delete {
+table.dataTable .btn-delete {
    padding: 2px 10px;
 }
 
-.dropdown-item {
+table.dataTable .dropdown-item {
    padding: 5px 15px;
    color: #212529;
 }
 
-.dropdown-item img {
+table.dataTable .dropdown-item img {
    padding-right: 5px;
-}
-
-.fa, .fas {
-   /* padding: 2px; */
-   padding-right: 10px;
-   color: #212529;
-   font-size: 22px;
-   vertical-align: text-bottom;
 }
