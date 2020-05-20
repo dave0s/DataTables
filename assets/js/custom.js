@@ -1,21 +1,55 @@
 $(document).ready(function () {
-  // test offer headings
-  var str1 = "Shift energy usage with storage to get 20% savings on your bill.";
-  var str2 = "Click here to request a quote and outline design.";
-  $("h4.header-purple").text(str1);
-  $("h5.header-purple").text(str1);
-  $("h4.header-grey").text(str2);
-  $("h5.header-grey").text(str2);
+  // test data
+  var description =
+    "Shift energy usage with storage to get 20% savings on your bill.";
+  var getQuote = "Click here to request a quote and outline design.";
+
+  var data = [
+    {
+      updated:
+        '<button class="btn toggle text-left" type="button" data-toggle="collapse" data-target="#collapse1" aria-controls="collapse1" aria-expanded="false"> <img src="assets/images/plus.svg" alt=""> <span class="header-grey">2h</span> </button>',
+      description: description,
+      type:
+        '<div class="text-center"> <img src="assets/images/finance-black.svg" alt=""> </div>',
+      status: "pending",
+      action:
+        '<div class="row w-100"> <div class="col-xl-6"> <a href="#" class="btn btn-outline-success btn-accept">Accept</a> </div> <div class="col-xl-6"> <a href="#" class="btn btn-delete" title="delete"> <img src="assets/images/bin.svg" alt="delete"> </a> </div> </div>',
+    },
+    {
+      updated:
+        '<div id="collapse1" class="collapse"> <div class="row mb-4"> <div class="col-xl-4"> <h4 class="header-purple">' +
+        description +
+        '</h4> </div> <div class="col-xl-6"> <h4 class="header-grey">' +
+        getQuote +
+        "</h4> </div> </div> </div>",
+      description: "",
+      type: "",
+      status: "",
+      action: "",
+    },
+  ];
 
   // DataTable config
-  $("#dataTable").DataTable();
-  // var table = $('#dataTable').DataTable({
-  //    scrollY: "600px",
-  //    scrollX: true,
-  //    scrollCollapse: true,
-  //    paging: false,
-  //    fixedColumns: true,
-  // });
+  $("#example").DataTable({
+    data: data,
+    columns: [
+      { data: "updated" },
+      { data: "description" },
+      { data: "type" },
+      { data: "status" },
+      { data: "action" },
+    ],
+    order: [[0, "desc"]],
+    // 'aoColumns': [ null, { 'bSortable': false } ],
+    paging: false,
+    scrollY: "600px",
+    scrollX: false,
+    scrollCollapse: true,
+    searching: false,
+    fixedColumns: false,
+  });
+  $(".even .sorting_1").attr("colspan", "5");
+  $(".even .sorting_1").siblings().remove();
 
   // accordion click events
   $(".toggle").on("click", function () {
